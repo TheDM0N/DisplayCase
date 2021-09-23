@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama:wght@400;700&display=swap" rel="stylesheet">
+<html>
+<style>
+
+html{
+	background: url('repeat.png');
+	font-family: 'Georama', sans-serif;
+	scroll-behavior:smooth;
+}
+body{margin:0;
+position:relative;}
+
+h1{
+	color:black;
+	font-size:3rem;
+	text-align:center;
+	margin: 3rem 0;
+}
+
+.top{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.featured{
+	color:hsla(0, 0%, 0%,.9);
+	font-size:2rem;
+	width:50%;
+	margin:auto;
+	text-align:center;
+	border-bottom: .25rem solid hsla(0, 0%, 0%,.9);
+}
+
+.container{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+
+.card{
+	background:hsla(180, 40%, 96%,.1);
+	margin:1.5rem;
+	text-align:center;
+	width:35ch;
+	border-radius:.75rem;
+	position:relative;
+	box-shadow:
+		1px 2px 2px hsla(180, 40%, 56%,.5),
+		2px 4px 4px hsla(180, 40%, 56%,.5),
+		4px 8px 8px hsla(180, 40%, 56%,.5);
+	border-top: 1px solid hsla(180, 40%, 56%,.5);
+	border-left: 1px solid hsla(180, 40%, 56%,.5);
+	backdrop-filter:blur(3px);
+	transition:transform 0.25s ease,box-shadow 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+.card:hover{
+	transform:scale(1.1);
+	backdrop-filter:blur(.5px);
+	box-shadow:
+		1px 2px 2px hsla(180, 40%, 56%,.3),
+		2px 4px 4px hsla(180, 40%, 56%,.3),
+		4px 8px 8px hsla(180, 40%, 56%,.3),
+		8px 16px 16px hsla(180, 40%, 56%,.3),
+		10px 20px 20px hsla(180, 40%, 56%,.3);
+}
+
+.card h2{
+	font-size:1.1rem;
+	margin:1rem;
+	color:black;
+}
+
+.card p{
+	margin:1rem;
+	padding-bottom:5rem;
+	color:black;
+}
+
+.card a{
+	background:hsla(180, 30%, 56%,.5);
+	color:black;
+	padding: .5rem 1rem;
+	display:inline-block;
+	border-radius:.25rem;
+	margin:1rem;
+	text-decoration:none;
+	position:absolute;
+	bottom:0;
+	left:50%;
+	transform:translate(-65%);
+	
+	
+}
+
+.card a:hover{
+	background:hsla(180, 30%, 56%,9);
+	color:white;
+}
+
+
+.card-image{
+	height:10rem;
+	border-radius: .75rem .75rem 0 0;
+	background-size:cover;
+}
+
+.pair1{
+	background-image:url("custompic1.jpg");
+	
+}
+
+.pair2{
+	background-image:url("PokemonMastersDiantha.jpg");
+	background-size:cover;
+}
+
+.pair3{
+	background-image:url("custompic3.jpg");
+	background-size:cover;
+}
+
+.container2{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	max-width:150ch;
+	margin:auto;
+	margin-bottom:10rem;
+}
+
+.pair4{
+	background-image:url("custompic4.png");
+	background-size:cover;
+}
+
+.pair5{
+	background-image:url("custompic5.png");
+	background-size:cover;
+}
+
+.pair6{
+	background-image:url("custompic6.jpg");
+	background-size:cover;
+}
+
+.pair7{
+	background-image:url("custompic7.png");
+	background-size:cover;
+}
+
+.pair8{
+	background-image:url("custompic8.png");
+	background-size:cover;
+}
+
+.pair9{
+	background-image:url("custompic9.jpg");
+	background-size:cover;
+}
+
+.bottom{
+background:hsla(180, 30%, 56%,1);
+height:10rem;
+clip-path: polygon(0 0, 100% 54%, 100% 100%, 0% 100%);
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+gap:1.5rem;
+}
+
+.bottom a{
+	text-decoration:none;
+	color:black;
+	font-size:1rem;
+}
+
+.bottom a:hover{
+	font-size:1.1rem;
+	font-weight:bold;
+}
+
+.bottom2{
+background:hsla(180, 30%, 46%,.5);
+height:10rem;
+width:100%;
+clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+margin:0;
+bottom:0;
+position:absolute;
+z-index:-1;
+}
+
+.ad{
+position:absolute;
+top:250px;
+left:0px;
+cursor:pointer;
+}
+
+#adarea{
+display:none;}
+
+.topblock{
+	height:10rem;
+	width:15rem;
+	clip-path: polygon(100% 0, 0 0, 0 100%);
+	z-index:-1;
+	background:hsla(180, 30%, 56%,1);
+	position:absolute;
+	top:0;
+}
+
+.topblock2{
+	height:5rem;
+	width:20rem;
+	clip-path: polygon(100% 0, 0 0, 100% 100%);
+	z-index:-2;
+	background:hsla(180, 30%, 56%,.5);
+	position:absolute;
+	top:0;
+	right:0;
+}
+	
+</style>
+<title>Sync Pair Maker Display Case</title>
+<body>
+<div class="top"id="home"><h1>Custom Sync Pair Maker Display Case</h1></div>
+<p class="featured">Hall of Fame</p>
+<div class="container"id="games">
+	<div class="card">
+		<div class="card-image pair1"></div>
+		<h2>SS Roxie & Toxitricity</h2>
+		<p>Made by: u/Makdragon720</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/pq5xp7/sygna_suit_roxie_and_toxtricity_concept/"target="_blank">View On Reddit</a>
+	</div>
+	<div class="card">
+		<div class="card-image pair2"></div>
+		<h2>Anniversary Diantha Cynthia Ethan</h2>
+		<p>Made by: u/Dmon24</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/pqkdz2/ive_come_from_the_future_to_show_you_guys_the_3rd/"target="_blank">View On Reddit</a>
+	</div>
+	<div class="card">
+		<div class="card-image pair3"></div>
+		<h2>Summer Mallow Kiawe</h2>
+		<p>Made by: u/dmaniac0206</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/p6ssd2/summer_mallow_summer_kiawe_sync_pair_concepts/"target="_blank">View On Reddit</a>
+	</div>
+</div>
+<p class="featured">Random Pairs</p>
+<div class="container2"id="games">
+	<div class="card">
+		<div class="card-image pair4"></div>
+		<h2>Drayden & Druddigon</h2>
+		<p>Made by: u/Greypaper-MO</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/p5g0iv/drayden_druddigon_sync_pair_basic_concept/" target="_blank">View On Reddit</a>
+	</div>
+	<div class="card">
+		<div class="card-image pair5"></div>
+		<h2>Victor & Shadow Rider Calyrex</h2>
+		<p>Made by: u/EthanKeisuke</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/ovt11z/redo_on_my_victor_sync_pair_concept/"target="_blank">View On Reddit</a>
+	</div>
+	<div class="card">
+		<div class="card-image pair6"></div>
+		<h2>Greta & Heracross</h2>
+		<p>Made by: u/Javident</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/pkbccn/first_fightingtype_tank_support_thoughts/"target="_blank">View On Reddit</a>
+	</div>
+	<div class="card">
+		<div class="card-image pair7"></div>
+		<h2>Bianca & Chandelure</h2>
+		<p>Made by: u/stephenw32768</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/pih0ft/bp_bianca_and_chandelure_concept_4_sunny_day/"target="_blank">View On Reddit</a>
+	</div>
+	<div class="card">
+		<div class="card-image pair8"></div>
+		<h2>Cheren(Classic) & Gigalith</h2>
+		<p>Made by: u/Kapples14</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/prj6tq/cheren_classic_and_gigalith_sync_pair_concept/"target="_blank">View On Reddit</a>
+	</div>
+	<div class="card">
+		<div class="card-image pair9"></div>
+		<h2>Selene & Dawn Wings Necrozma</h2>
+		<p>Made by: u/Themineking09</p>
+		<a href="https://www.reddit.com/r/pokemonmastersconcept/comments/psk9oq/im_so_sad_i_cant_post_on_the_main_masters/"target="_blank">View On Reddit</a>
+	</div>
+</div>
+
+
+<div class="bottom">
+	<a href="https://thedm0n.github.io/CustomSyncPair/"target="_blank">Sync Pair Maker</a>
+	<a href="https://thedm0n.github.io/SyncPairMakerHelp/"target="_blank">Help</a>
+	<a href="javascript:openad();">Secret</a>
+</div>
+<div class="bottom2"></div>
+<div class="topblock"></div>
+<div class="topblock2"></div>
+<div class="ad"  id="adarea"onclick="closead()"><img src="gardivorad.png"></div>
+</body>
+
+</html>
+
+<script>
+
+	function closead()	{
+		var ad= document.getElementById("adarea");
+		ad.style.display = "none";
+		}
+		
+	function openad()	{
+		var ad= document.getElementById("adarea");
+		ad.style.display = "block";
+		document.getElementById('adarea').scrollIntoView();
+		}
+
+
+</script>
