@@ -39,6 +39,7 @@ h1{
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
+	position:relative;
 }
 
 .card{
@@ -115,12 +116,12 @@ h1{
 }
 
 .pair2{
-	background-image:url("PokemonMastersDiantha.jpg");
+	background-image:url("custompic10.png");
 	background-size:cover;
 }
 
 .pair3{
-	background-image:url("custompic3.jpg");
+	background-image:url("PokemonMastersDiantha.jpg");
 	background-size:cover;
 }
 
@@ -227,6 +228,85 @@ display:none;}
 	top:0;
 	right:0;
 }
+
+ #badge-ribbon2 {
+      position: relative;
+		margin:0;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+   
+    }
+    #badge-ribbon2:before,
+    #badge-ribbon2:after {
+      content: '';
+      position: absolute;
+      border-bottom: 35px solid #9b1c31;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      top: 35px;
+      left: -10px;
+      transform: rotate(-140deg);
+      z-index:-5;
+    }
+    #badge-ribbon2:after {
+      left: auto;
+      right: -10px;
+      transform: rotate(140deg);
+    }
+	
+	#letter1{
+font-size:18px;
+  text-align:center;
+  margin:0;
+  padding-top:15px;
+  padding-right:2px;
+  color:rgba(250,243,183,.6);
+ font-family: 'Karla', sans-serif;
+  opacity:.7;
+   text-shadow: 2px 2px 2px rgba(191,149,63,1);
+}
+
+#letter2{
+font-size:18px;
+  text-align:center;
+  margin:0;
+  padding-top:15px;
+  padding-right:2px;
+  color:rgba(190, 192, 194,.6);
+ font-family: 'Karla', sans-serif;
+  opacity:.7;
+   text-shadow: 2px 2px 2px rgb(161, 162, 163);
+}
+
+#letter3{
+font-size:18px;
+  text-align:center;
+  margin:0;
+  padding-top:15px;
+  padding-right:2px;
+  color:rgba(176, 141, 87,.6);
+ font-family: 'Karla', sans-serif;
+  opacity:.7;
+   text-shadow: 2px 2px 2px rgb(137, 94, 26);
+}
+
+.gold{
+background: radial-gradient(circle, rgba(250,243,183,1) 0%, rgba(191,149,63,1) 57%, rgba(250,243,183,1) 100%);
+}
+
+.silver{
+background: radial-gradient(circle, rgb(190, 192, 194) 0%, rgb(161, 162, 163) 57%, rgb(190, 192, 194) 100%);
+}
+
+.bronze{
+background: radial-gradient(circle, rgb(176, 141, 87) 0%, rgb(137, 94, 26) 57%, rgb(176, 141, 87) 100%);
+}
+
+.medal{
+position:absolute;
+top:300px;
+}
 	
 </style>
 <title>Sync Pair Maker Display Case</title>
@@ -239,18 +319,27 @@ display:none;}
 		<h2>SS Roxie & Toxitricity</h2>
 		<p>Made by: u/Makdragon720</p>
 		<a href="https://www.reddit.com/r/PokemonMasters/comments/pq5xp7/sygna_suit_roxie_and_toxtricity_concept/"target="_blank">View On Reddit</a>
+		<div class="medal"><div id="badge-ribbon2" class="gold">
+  <p id="letter1">600</p>
+</div></div>
 	</div>
 	<div class="card">
 		<div class="card-image pair2"></div>
-		<h2>Anniversary Diantha Cynthia Ethan</h2>
-		<p>Made by: u/Dmon24</p>
-		<a href="https://www.reddit.com/r/PokemonMasters/comments/pqkdz2/ive_come_from_the_future_to_show_you_guys_the_3rd/"target="_blank">View On Reddit</a>
+		<h2>SS Calem & Greninja</h2>
+		<p>Made by: u/yvbnsrtu</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/pwl1kb/sygna_suit_concept_for_calem_and_greninja/"target="_blank">View On Reddit</a>
+		<div class="medal"><div id="badge-ribbon2" class="silver">
+  <p id="letter2">172</p>
+</div></div>
 	</div>
 	<div class="card">
 		<div class="card-image pair3"></div>
-		<h2>Summer Mallow Kiawe</h2>
-		<p>Made by: u/dmaniac0206</p>
-		<a href="https://www.reddit.com/r/PokemonMasters/comments/p6ssd2/summer_mallow_summer_kiawe_sync_pair_concepts/"target="_blank">View On Reddit</a>
+		<h2>Anniversary Diantha Cynthia Ethan</h2>
+		<p>Made by: u/Dmon24</p>
+		<a href="https://www.reddit.com/r/PokemonMasters/comments/pqkdz2/ive_come_from_the_future_to_show_you_guys_the_3rd/"target="_blank">View On Reddit</a>
+		<div class="medal"><div id="badge-ribbon2" class="bronze">
+  <p id="letter3">144</p>
+</div></div>
 	</div>
 </div>
 <p class="featured">Random Pairs</p>
